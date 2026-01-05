@@ -22,39 +22,27 @@ document.addEventListener('DOMContentLoaded', function() {
 // ==========================================
 
 function initWelcomeScreen() {
-    const welcomeSection = document.getElementById('welcome');
-    const enterButton = document.getElementById('enterButton');
-    const homeSection = document.getElementById('home');
+    // 1. เลือก Element (ใช้ ID ตามที่ตั้งไว้ใน index.html)
+    const enterButton = document.querySelector('#enterButton');
+    const welcomeSection = document.querySelector('#welcome');
 
-    if (!welcomeSection || !enterButton) {
-        console.warn('Welcome screen elements not found');
-        return;
-    }
+    // ตรวจสอบว่ามี Element อยู่จริงไหม เพื่อป้องกัน Error
+    if (!enterButton || !welcomeSection) return;
 
-    enterButton.addEventListener('click', function() {
-        console.log('Enter button clicked');
+    // 2. เมื่อคลิกปุ่ม
+    enterButton.addEventListener('click', () => {
+        console.log('Enter button clicked'); // เช็คใน Console ว่าปุ่มทำงานไหม
         
-        // Add exit animation to welcome screen
-        welcomeSection.classList.add('welcome-exit');
+        // ทำให้ค่อยๆ จาง (ใช้ Class ของ Tailwind ที่มีอยู่ใน index.html)
+        welcomeSection.classList.add('opacity-0');
         
-        // Add enter animation to home section
-        if (homeSection) {
-            homeSection.classList.add('home-enter');
-        }
-
-        // Hide welcome screen after animation completes
+        // ตั้งเวลาให้หายไปหลังจากจางเสร็จ (1000ms ตาม duration ใน HTML)
         setTimeout(() => {
-            welcomeSection.style.display = 'none';
-        }, 1000);
-
-        // Scroll to home after animation
-        setTimeout(() => {
-            if (homeSection) {
-                homeSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }, 500);
+            welcomeSection.classList.add('hidden');
+            // หรือจะใช้ welcomeSection.style.display = 'none'; ก็ได้ครับ
+        }, 1000); 
     });
-
+}
     // Allow Enter key to also trigger entry
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' && welcomeSection.style.display !== 'none' && !welcomeSection.classList.contains('welcome-exit')) {

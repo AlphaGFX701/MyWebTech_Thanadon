@@ -15,53 +15,6 @@
 <body class="bg-gray-950 text-gray-100 font-inter">
     <!-- Navigation Bar -->
     <nav class="fixed w-full top-0 z-50 bg-gray-950 bg-opacity-95 backdrop-blur-md border-b border-gray-800">
-        <!-- ...existing navigation content... -->
-    </nav>
-
-    <!-- Main Content -->
-    <main>
-        <!-- ...existing main content... -->
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-950 border-t border-gray-800 py-12 px-4">
-        <!-- ...existing footer content... -->
-    </footer>
-
-    <!-- Image Zoom Modal -->
-    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
-        <!-- ...existing modal content... -->
-    </div>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-
-    <!-- Firebase SDK -->
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyCZVtbeJ5XYQ0Nm-NMUeMKx5UIyPBey15E",
-        authDomain: "thanadon-myproject.firebaseapp.com",
-        projectId: "thanadon-myproject",
-        storageBucket: "thanadon-myproject.firebasestorage.app",
-        messagingSenderId: "263226640778",
-        appId: "1:263226640778:web:a58a758858b07b7a86a073",
-        measurementId: "G-DRH1ZEGNQ0"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
-</body>
-</html>
- class="bg-gray-950 text-gray-100 font-inter">
-    <!-- Navigation Bar -->
-    <nav class="fixed w-full top-0 z-50 bg-gray-950 bg-opacity-95 backdrop-blur-md border-b border-gray-800">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo/Brand -->
             <div class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1243,5 +1196,23 @@ The event was organized by the Electricity Generating Authority of Thailand (EGA
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const enterButton = document.getElementById('enterButton');
+        const welcomeSection = document.getElementById('welcome');
+
+        if (enterButton && welcomeSection) {
+            enterButton.addEventListener('click', () => {
+                // เพิ่ม animation ค่อยๆ จางหายไป
+                welcomeSection.style.opacity = '0';
+                
+                // รอให้ animation จบแล้วค่อยซ่อน element เพื่อไม่ให้ขวางการคลิกส่วนอื่นๆ
+                setTimeout(() => {
+                    welcomeSection.style.display = 'none';
+                }, 1000); // 1000ms เท่ากับ duration-1000 ใน class Tailwind
+            });
+        }
+    });
+</script>
 </body>
 </html>
