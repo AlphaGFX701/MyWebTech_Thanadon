@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Learn HTML in 1 Day — Simple Beginner Guide</title>
+    <style>
+      body{font-family:Segoe UI, Arial, sans-serif; background:#0f1724; color:#e6eef8; padding:28px}
+      .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:20px; border-radius:12px; max-width:900px; margin:0 auto}
+      h1,h2{color:#fff}
+      pre{background:#071025; padding:14px; border-radius:8px; overflow:auto}
+      code{color:#bfefff}
+      .example{margin:12px 0}
+      .exercise{background:#071025; padding:12px; border-radius:8px; margin-top:10px}
+      .hint{color:#bfc7d6; font-size:0.95rem}
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Learn HTML in 1 Day — Quick Beginner Guide</h1>
+      <p class="hint">This page is a compact, practical plan to learn the basics of HTML in one day. Read, copy the examples, and edit them in your own files.</p>
+
+      <h2>Plan (one day)</h2>
+      <ol>
+        <li>Intro: What is HTML? — 15 minutes</li>
+        <li>Structure: Tags, elements, attributes — 45 minutes</li>
+        <li>Content: text, lists, images, links — 60 minutes</li>
+        <li>Layout & forms: simple form fields and semantic tags — 45 minutes</li>
+        <li>Practice exercises & tweak styles — 45 minutes</li>
+      </ol>
+
+      <hr />
+
+      <h2>1 — Basic page structure</h2>
+      <p>Every page starts with a few standard tags. Try creating a new file called <code>index.html</code> and paste this:</p>
+
+      <div class="example">
+        <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello world!&lt;/h1&gt;
+    &lt;p&gt;I just wrote my first HTML file.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+
+      <div class="exercise">
+        <strong>Exercise:</strong> Save that as <code>index.html</code> and open it in your browser. Change the text inside &lt;h1&gt; and refresh.
+      </div>
+
+      <hr />
+
+      <h2>2 — Common elements you should know</h2>
+      <ul>
+        <li><code>&lt;h1&gt; ... &lt;/h1&gt;</code> — headings (h1 highest, h6 smallest)</li>
+        <li><code>&lt;p&gt; ... &lt;/p&gt;</code> — paragraphs</li>
+        <li><code>&lt;a href="..."&gt;link&lt;/a&gt;</code> — links</li>
+        <li><code>&lt;img src="..." alt="..." /&gt;</code> — images (always add alt)</li>
+        <li><code>&lt;ul&gt; &lt;li&gt; ... &lt;/li&gt; &lt;/ul&gt;</code> — bullet lists</li>
+      </ul>
+
+      <div class="example">
+        <pre><code>&lt;p&gt;Visit &lt;a href="https://example.com"&gt;example.com&lt;/a&gt;.&lt;/p&gt;
+&lt;img src="https://via.placeholder.com/200" alt="placeholder image" /&gt;
+&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      </div>
+
+      <div class="exercise">
+        <strong>Exercise:</strong> Add an image and a link to your <code>index.html</code>. Try changing the link target to open in a new tab using <code>target="_blank"</code>.
+      </div>
+
+      <hr />
+
+      <h2>3 — Forms (very simple)</h2>
+      <p>Forms let users type input. This small example shows a text field, email and a submit button:</p>
+
+      <div class="example">
+        <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name&lt;/label&gt;
+  &lt;input id="name" name="name" type="text" placeholder="Your name" /&gt;
+
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" name="email" type="email" placeholder="you@example.com" /&gt;
+
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+
+      <div class="exercise">
+        <strong>Exercise:</strong> Try adding the form to your page. Submit will do nothing locally (unless you set an action) — that’s fine for practicing.
+      </div>
+
+      <hr />
+
+      <h2>4 — Semantic tags you should learn next</h2>
+      <p>These tags make your HTML clearer and help search engines and screen readers:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code></li>
+        <li><code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> — for meaningful pieces of content</li>
+      </ul>
+
+      <hr />
+
+      <h2>5 — Quick practice plan (1 day)</h2>
+      <ol>
+        <li>0–30 min: Create and open a basic page. Edit text & tags — get comfortable.</li>
+        <li>30–90 min: Add images, links and lists. Practice copying examples.</li>
+        <li>90–120 min: Build a small contact form and practice semantic tags.</li>
+        <li>120–240 min: Make a small page with 3 sections and style with inline CSS (later learn external CSS).</li>
+      </ol>
+
+      <hr />
+
+      <h2>Extra — Tiny starter you can copy (editable)</h2>
+      <pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+    &lt;title&gt;My Practice Page&lt;/title&gt;
+    &lt;style&gt; body{font-family:Arial;padding:18px} header{border-bottom:1px solid #eee;padding-bottom:10px;margin-bottom:10px} .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}&lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;My Practice Page&lt;/h1&gt;
+      &lt;p&gt;A tiny page I made while learning HTML&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+      &lt;section class="grid"&gt;
+        &lt;div&gt;&lt;h2&gt;About&lt;/h2&gt;&lt;p&gt;I am learning HTML today.&lt;/p&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;h2&gt;Contact&lt;/h2&gt;&lt;p&gt;Email: &lt;a href="mailto:you@example.com"&gt;you@example.com&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;&lt;p&gt;Made by you — practice makes progress!&lt;/p&gt;&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <h2>One-day checklist</h2>
+      <ul>
+        <li>Open and edit an HTML file — done</li>
+        <li>Use headings, paragraphs, and lists — done</li>
+        <li>Add images and links — done</li>
+        <li>Create a simple form — done</li>
+        <li>Build a small multi-section page — done</li>
+      </ul>
+
+      <p class="hint">If you want, I can add a step-by-step guided exercise in this file and show how to style the page with a little CSS next.</p>
+    </div>
+  </body>
+</html>

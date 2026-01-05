@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Cheatsheet</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen p-6">
+
+  <main class="max-w-5xl mx-auto space-y-12">
+
+    <!-- PAGE TITLE -->
+    <header class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+      <h1 class="text-4xl font-bold">Tailwind CSS Cheatsheet</h1>
+      <p class="text-slate-300 mt-2">
+        Text styling, margin, and padding utilities in one page.
+      </p>
+    </header>
+
+    <!-- ================= TEXT UTILITIES ================= -->
+    <section class="space-y-8">
+
+      <h2 class="text-3xl font-bold border-b border-slate-700 pb-2">
+        Text Utilities
+      </h2>
+
+      <!-- TEXT COLOR -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <h3 class="text-2xl font-bold">1) text-color-number</h3>
+
+        <p class="text-slate-300">
+          Format:
+          <span class="font-mono text-pink-400">text-</span>
+          <span class="font-mono text-yellow-300">color</span>
+          <span class="font-mono text-emerald-400">-number</span>
+          (shade 50–950)
+        </p>
+
+        <div class="space-y-2">
+          <p class="text-red-500">text-red-500</p>
+          <p class="text-green-400">text-green-400</p>
+          <p class="text-blue-300">text-blue-300</p>
+          <p class="text-pink-600">text-pink-600</p>
+        </div>
+
+        <div class="space-y-2 pt-2">
+          <p class="text-[#FF0000]">text-[#FF0000]</p>
+          <p class="text-[#FA08DC]">text-[#FA08DC]</p>
+          <p class="text-[rgb(255,255,255)]">text-[rgb(255,255,255)]</p>
+        </div>
+      </div>
+
+      <!-- TEXT SIZE -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <h3 class="text-2xl font-bold">2) text-size</h3>
+
+        <div class="space-y-1">
+          <p class="text-xs">text-xs</p>
+          <p class="text-sm">text-sm</p>
+          <p class="text-base">text-base</p>
+          <p class="text-lg">text-lg</p>
+          <p class="text-xl">text-xl</p>
+          <p class="text-3xl font-bold">text-3xl</p>
+          <p class="text-5xl font-bold">text-5xl</p>
+        </div>
+      </div>
+
+      <!-- FONT -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <h3 class="text-2xl font-bold">3) font-family / style / weight</h3>
+
+        <p class="font-sans">font-sans</p>
+        <p class="font-serif">font-serif</p>
+        <p class="font-mono">font-mono</p>
+
+        <p class="italic">italic</p>
+
+        <p class="font-thin">font-thin</p>
+        <p class="font-light">font-light</p>
+        <p class="font-normal">font-normal</p>
+        <p class="font-semibold">font-semibold</p>
+        <p class="font-bold">font-bold</p>
+        <p class="font-extrabold">font-extrabold</p>
+      </div>
+
+    </section>
+
+    <!-- ================= SPACING UTILITIES ================= -->
+    <section class="space-y-8">
+
+      <h2 class="text-3xl font-bold border-b border-slate-700 pb-2">
+        Margin & Padding
+      </h2>
+
+      <!-- MARGIN -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <h3 class="text-2xl font-bold">4) m-number</h3>
+
+        <p class="font-mono text-green-400">
+          &lt;div class="m-5"&gt;...&lt;/div&gt;
+        </p>
+
+        <div class="bg-slate-700 m-5 p-4 rounded">
+          m-5 (margin all sides)
+        </div>
+
+        <ul class="list-disc list-inside text-slate-300">
+          <li>mt-8 → top</li>
+          <li>mb-8 → bottom</li>
+          <li>ml-8 → left</li>
+          <li>mr-8 → right</li>
+          <li>mx-8 → left + right</li>
+          <li>my-8 → top + bottom</li>
+        </ul>
+
+        <div class="bg-slate-700 mx-8 my-4 p-4 rounded">
+          mx-8 my-4
+        </div>
+      </div>
+
+      <!-- PADDING -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <h3 class="text-2xl font-bold">5) p-number</h3>
+
+        <p class="font-mono text-blue-400">
+          &lt;div class="p-8"&gt;...&lt;/div&gt;
+        </p>
+
+        <div class="bg-slate-700 p-8 rounded">
+          p-8 (padding all sides)
+        </div>
+
+        <ul class="list-disc list-inside text-slate-300">
+          <li>pt-6 → top</li>
+          <li>pb-6 → bottom</li>
+          <li>pl-6 → left</li>
+          <li>pr-6 → right</li>
+          <li>px-6 → left + right</li>
+          <li>py-6 → top + bottom</li>
+        </ul>
+
+        <div class="bg-slate-700 py-8 px-4 mx-4 rounded">
+          py-8 px-4 mx-4
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center">
+      <p class="text-slate-400">
+        Tailwind CSS — Text, Margin, Padding Cheatsheet
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>

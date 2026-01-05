@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Cool Demo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./Css/Bootstrap.css" />
+</head>
+<body class="bg-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">CED Bootstrap Lab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="#grid">Grid</a></li>
+          <li class="nav-item"><a class="nav-link" href="#colors">Colors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#table">Table</a></li>
+          <li class="nav-item"><a class="nav-link" href="#carousel">Carousel</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="py-5">
+    <div class="container">
+      <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm border">
+        <h1 class="display-6 fw-bold mb-2">Bootstrap Components Playground</h1>
+        <p class="text-secondary mb-4">
+          Clean layout, grid system, colors, table, and carousel — all in one page.
+        </p>
+        <div class="d-flex gap-2 flex-wrap">
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-outline-primary">Outline Button</button>
+          <a class="btn btn-success" href="https://www.speedtest.net/th" target="_blank">Open Speedtest</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <section id="grid" class="pb-5">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Grid Columns</h2>
+      <div class="row g-3">
+        <div class="col-xl-4 col-sm-12">
+          <div class="bg-primary text-white text-center p-4 rounded-4 shadow-sm">Column 1</div>
+        </div>
+        <div class="col-xl-4 col-sm-12">
+          <div class="bg-secondary text-white text-center p-4 rounded-4 shadow-sm">Column 2</div>
+        </div>
+        <div class="col-xl-4 col-sm-12">
+          <div class="bg-warning text-dark text-center p-4 rounded-4 shadow-sm">Column 3</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colors -->
+  <section id="colors" class="pb-5">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Color Utilities</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="p-3 rounded-4 bg-info text-white shadow-sm">bg-info</div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 rounded-4 bg-success text-white shadow-sm">bg-success</div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 rounded-4 bg-danger text-white shadow-sm">bg-danger</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table -->
+  <section id="table" class="pb-5">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Table</h2>
+
+      <div class="table-responsive shadow-sm bg-white rounded-4 p-3 border">
+        <table class="table table-bordered table-sm table-hover mb-2">
+          <thead class="table-dark">
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Film</td>
+              <td>Jaimuang</td>
+              <td>film@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <small class="text-secondary">
+          This table uses Bootstrap classes to apply basic styling, full borders, and a compact layout.
+          The <code>table-sm</code> class reduces cell padding to make the table smaller and more space-efficient.
+        </small>
+      </div>
+    </div>
+  </section>
+
+    <!--Card-->
+    <div class="card" style="width: 18rem;">
+      <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Card Image">
+      <div class="card-body">
+        <h5 class="card-title">Card Title</h5>
+        <p class="card-text">This is a simple card example using Bootstrap classes.</p
+
+ <!-- Carousel -->
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+  
+  <!-- Indicators (Bootstrap 5 uses button) -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="Slide 1">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/1200/500?random=2" class="d-block w-100" alt="Slide 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://picsum.photos/1200/500?random=3" class="d-block w-100" alt="Slide 3">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white">
+    <div class="container text-center">
+      <small>© 2025 CED Bootstrap Lab — Made with Bootstrap</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (Bundle includes Popper) -->
+  <script src="./JS/bootstrap.bundle.js"></script>
+  
+
+
+
+</body>
+</html>
