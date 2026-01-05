@@ -1,0 +1,619 @@
+/* ==========================================
+   CUSTOM STYLES & ANIMATIONS
+   ========================================== */
+
+/* Font Families */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+
+:root {
+    --primary-color: #06b6d4;
+    --secondary-color: #3b82f6;
+    --accent-color: #a855f7;
+    --dark-bg: #030712;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --text-light: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Screen Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInDelay {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInScale 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+    animation: fadeInDelay 0.8s ease-out forwards;
+}
+
+.delay-1000 {
+    animation-delay: 1s !important;
+}
+
+.delay-2000 {
+    animation-delay: 2s !important;
+}
+
+/* Slide In Up Animation */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Exit Animation */
+@keyframes welcomeExit {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0) rotate(0deg);
+        filter: blur(0px);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.95) translateY(-50px) rotate(-1deg);
+        filter: blur(10px);
+    }
+}
+
+/* Apply animation class */
+.welcome-exit {
+    animation: welcomeExit 1s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+    pointer-events: none !important;
+}
+
+.home-enter {
+    animation: slideInUp 1s ease-out forwards !important;
+}
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(6, 182, 212, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
+    }
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Slide In From Left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* ==========================================
+   NAVIGATION STYLES
+   ========================================== */
+
+nav {
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    color: #d1d5db;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle */
+#mobile-menu-btn {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#mobile-menu-btn:hover {
+    color: #06b6d4;
+}
+
+/* ==========================================
+   BUTTON STYLES
+   ========================================== */
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   CARD STYLES
+   ========================================== */
+
+.card {
+    border-radius: 12px;
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   FORM STYLES
+   ========================================== */
+
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   SCROLL TO TOP BUTTON
+   ========================================== */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 40;
+    transition: all 0.3s ease;
+}
+
+#scrollToTop.show {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+#scrollToTop:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   HERO SECTION STYLES
+   ========================================== */
+
+.hero-section {
+    background: linear-gradient(135deg, #030712 0%, #111827 50%, #1f2937 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   GRADIENT TEXT
+   ========================================== */
+
+.gradient-text {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* ==========================================
+   PROGRESS BARS
+   ========================================== */
+
+.progress-bar {
+    height: 8px;
+    background: rgba(6, 182, 212, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* ==========================================
+   SKILL CARDS
+   ========================================== */
+
+.skill-card {
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    background: rgba(31, 41, 55, 0.8);
+    border-color: #06b6d4;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+/* ==========================================
+   EXPERIENCE CARDS
+   ========================================== */
+
+.experience-card {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(31, 41, 55, 0.4) 100%);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.2);
+    transform: translateY(-8px);
+}
+
+/* ==========================================
+   SECTION BACKGROUNDS
+   ========================================== */
+
+section {
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+    }
+
+    #scrollToTop {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    section {
+        padding: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .hidden.md\:flex {
+        display: none;
+    }
+}
+
+/* ==========================================
+   SMOOTH TRANSITIONS
+   ========================================== */
+
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   SCROLLBAR STYLING
+   ========================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #06b6d4;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-color: #06b6d4 #030712;
+    scrollbar-width: thin;
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   ========================================== */
+
+.blur-backdrop {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.gradient-primary {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
+}
+
+.glow-cyan {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Visible for Better Accessibility */
+*:focus-visible {
+    outline: 2px solid #06b6d4;
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+
+@media print {
+    nav,
+    footer,
+    #scrollToTop {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    a {
+        color: #0066cc;
+    }
+}
+
+/* ==========================================
+   IMAGE GALLERY ZOOM EFFECT
+   ========================================== */
+
+.group img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.group img:hover {
+    transform: scale(1.15) !important;
+    filter: brightness(1.1);
+}
+
+#imageModal img {
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

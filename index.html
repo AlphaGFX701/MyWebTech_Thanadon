@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanadon Jaimuang - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-950 text-gray-100 font-inter">
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full top-0 z-50 bg-gray-950 bg-opacity-95 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo/Brand -->
+            <div class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                My Portfolio
+            </div>
+            
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#home" class="nav-link hover:text-cyan-400 transition">Home</a></li>
+                <li><a href="#about" class="nav-link hover:text-cyan-400 transition">About</a></li>
+                <li><a href="#education" class="nav-link hover:text-cyan-400 transition">Education</a></li>
+                <li><a href="#experience" class="nav-link hover:text-cyan-400 transition">Experience</a></li>
+                <li><a href="#skills" class="nav-link hover:text-cyan-400 transition">Skills</a></li>
+                <li><a href="#interests" class="nav-link hover:text-cyan-400 transition">Interests</a></li>
+                <li><a href="#music" class="nav-link hover:text-cyan-400 transition">Music</a></li>
+                <li><a href="#certificates" class="nav-link hover:text-cyan-400 transition">Certificates</a></li>
+                <li><a href="#contact" class="nav-link hover:text-cyan-400 transition">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="#home" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Home</a></li>
+                <li><a href="#about" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">About</a></li>
+                <li><a href="#education" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Education</a></li>
+                <li><a href="#experience" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Experience</a></li>
+                <li><a href="#skills" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Skills</a></li>
+                <li><a href="#interests" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Interests</a></li>
+                <li><a href="#music" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Music</a></li>
+                <li><a href="#certificates" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Certificates</a></li>
+                <li><a href="#contact" class="block py-2 px-4 hover:bg-gray-800 rounded hover:text-cyan-400 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Welcome Splash Screen -->
+        <section id="welcome" class="fixed inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-black z-50 flex items-center justify-center transition-opacity duration-1000" style="opacity: 1;">
+            <div class="text-center space-y-8 px-4">
+                <!-- Animated Background Circles -->
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="absolute top-10 left-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+                    <div class="absolute top-40 right-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-2000"></div>
+                    <div class="absolute -bottom-8 left-20 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
+                </div>
+
+                <!-- Welcome Content -->
+                <div class="relative z-10 space-y-8">
+                    <!-- Main Title -->
+                    <div class="space-y-4">
+                        <h1 class="text-6xl md:text-8xl font-bold font-poppins mb-6 animate-fade-in">
+                            <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+                                Welcome to
+                            </span>
+                        </h1>
+                        <h2 class="text-5xl md:text-7xl font-bold font-poppins animate-fade-in-delay" style="animation-delay: 0.3s;">
+                            <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                                Film's World
+                            </span>
+                        </h2>
+                    </div>
+
+                    <!-- Subtitle -->
+                    <p class="text-xl md:text-2xl text-gray-300 animate-fade-in-delay" style="animation-delay: 0.6s;">
+                        A journey of code, creativity, and never giving up
+                    </p>
+
+                    <!-- Click to Enter -->
+                    <div class="pt-8 animate-fade-in-delay" style="animation-delay: 0.9s;">
+                        <button id="enterButton" class="group relative px-8 py-4 text-lg font-bold text-white overflow-hidden rounded-lg transition-all duration-300 hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:from-cyan-500 group-hover:to-blue-600"></div>
+                            <div class="relative flex items-center justify-center gap-2">
+                                <span>Click to Enter</span>
+                                <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                            </div>
+                        </button>
+
+                        <!-- Animated Arrow -->
+                        <div class="mt-8 flex justify-center">
+                            <i class="fas fa-chevron-down text-cyan-400 text-2xl animate-bounce"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 bg-gradient-to-b from-gray-950 to-gray-900">
+            <div class="text-center max-w-3xl mx-auto animate-fade-in">
+                <!-- Profile Avatar Placeholder -->
+                <div class="mb-8 flex justify-center">
+                    <div class="w-56 h-56 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 p-1 animate-pulse">
+                        <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                            <img src="images/profile-thanadon.jpg" alt="Thanadon Jaimuang" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Welcome Text -->
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 font-poppins">
+                    <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+                        Thanadon Jaimuang
+                    </span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-cyan-400 font-semibold mb-2">Computer Education Student</h2>
+                <h3 class="text-2xl md:text-3xl text-blue-400 font-semibold mb-6">Creative Developer</h3>
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                    "Never give up on life" – I'm passionate about technology, creative thinking, and pushing the boundaries of what's possible with code and design.
+                </p>
+
+                <!-- Call to Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#about" class="bg-cyan-500 hover:bg-cyan-600 text-gray-950 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">
+                        Explore My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-950 font-bold py-3 px-8 rounded-lg transition">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="mt-16 animate-bounce">
+                    <i class="fas fa-chevron-down text-cyan-400 text-2xl"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 px-4 bg-gray-900">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">About</span> Me
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- About Content -->
+                    <div class="space-y-6">
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            I'm Thanadon Jaimuang, currently in my second year of studying at King Mongkut's University of Technology North Bangkok in the Department of Computer Education. I'm passionate about combining technology with creativity to solve real-world problems.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            With a strong foundation in programming and design, I enjoy working on projects that involve artificial intelligence, virtual reality, and 3D modeling. I believe that great communication and collaboration are key to successful projects.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            My approach to learning is hands-on and continuous. I thrive in challenging environments where I can contribute my technical skills while also learning from experienced professionals and peers.
+                        </p>
+
+                        <!-- Quick Facts -->
+                        <div class="grid grid-cols-2 gap-4 pt-6">
+                            <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition">
+                                <p class="text-cyan-400 font-semibold">📍 Location</p>
+                                <p class="text-gray-300">Bangkok, Thailand</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition">
+                                <p class="text-cyan-400 font-semibold">🎓 Current</p>
+                                <p class="text-gray-300">2nd Year Student</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition">
+                                <p class="text-cyan-400 font-semibold">🏫 School</p>
+                                <p class="text-gray-300">Suanboonyopatham</p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition">
+                                <p class="text-cyan-400 font-semibold">💼 Status</p>
+                                <p class="text-gray-300">Open to Projects</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Image -->
+                    <div class="flex justify-center">
+                        <div class="relative">
+                            <div class="w-96 h-auto bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl opacity-10 absolute -top-2 -left-2 w-full h-full" style="width: calc(100% + 1rem); height: calc(100% + 1rem);"></div>
+                            <div class="relative border-4 border-cyan-400 rounded-2xl overflow-hidden hover:border-blue-400 transition shadow-2xl" style="width: 500px; height: 625px;">
+                                <img src="images/thanadon-about.jpg" alt="Thanadon Jaimuang" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 px-4 bg-gray-950">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">Education</span>
+                </h2>
+
+                <div class="space-y-6">
+                    <!-- University -->
+                    <div class="bg-gray-900 border-l-4 border-cyan-400 p-6 rounded-lg hover:shadow-lg hover:shadow-cyan-400/20 transition">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-cyan-400">King Mongkut's University of Technology North Bangkok</h3>
+                                <p class="text-gray-400 text-lg">Department of Computer Education</p>
+                            </div>
+                            <span class="bg-cyan-400 bg-opacity-20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold">Current</span>
+                        </div>
+                        <p class="text-gray-300 mb-3"><i class="fas fa-calendar text-cyan-400 mr-2"></i> 2024 - Present</p>
+                        <p class="text-gray-300 mb-3"><i class="fas fa-graduation-cap text-cyan-400 mr-2"></i> Year: 2nd Year</p>
+                        <ul class="text-gray-300 space-y-2 list-disc list-inside">
+                            <li>Studying computer Education  </li>
+                            <li>Focus on programming languages and software development</li>
+                            <li>Developing projects in AI and Virtual Reality technologies</li>
+                        </ul>
+                    </div>
+
+                    <!-- High School -->
+                    <div class="bg-gray-900 border-l-4 border-blue-400 p-6 rounded-lg hover:shadow-lg hover:shadow-blue-400/20 transition">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-blue-400">Suanboonyopatham Lamphun School</h3>
+                                <p class="text-gray-400 text-lg">General Education</p>
+                            </div>
+                            <span class="bg-blue-400 bg-opacity-20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">Completed</span>
+                        </div>
+                        <p class="text-gray-300 mb-3"><i class="fas fa-calendar text-blue-400 mr-2"></i> Graduated 2023</p>
+                        <p class="text-gray-300">Completed high school education in Lamphun, Thailand, with focus on science and mathematics.</p>
+                    </div>
+                </div>
+
+                <!-- Learning Path -->
+                <div class="mt-12 grid md:grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="text-xl font-semibold text-cyan-400 mb-4">
+                            <i class="fas fa-book mr-2"></i> Core Competencies
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center"><span class="text-cyan-400 mr-2">✓</span> Object-Oriented Programming</li>
+                            <li class="flex items-center"><span class="text-cyan-400 mr-2">✓</span> Data Structures & Algorithms</li>
+                            <li class="flex items-center"><span class="text-cyan-400 mr-2">✓</span> Web Development</li>
+                            <li class="flex items-center"><span class="text-cyan-400 mr-2">✓</span> Software Engineering Basics</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="text-xl font-semibold text-blue-400 mb-4">
+                            <i class="fas fa-star mr-2"></i> Areas of Interest
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">→</span> Artificial Intelligence & Machine Learning</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">→</span> Virtual Reality (VR) Technology</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">→</span> 3D Graphics & Modeling</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">→</span> Full Stack Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Activities Section -->
+        <section id="experience" class="py-20 px-4 bg-gray-900">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">Activities &</span> Experiences
+                </h2>
+
+                <!-- Experience Cards -->
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <!-- Card 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20 transition transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-cyan-400 mb-2">
+                                <i class="fas fa-code mr-2"></i> Programming Training
+                            </h3>
+                            <p class="text-gray-300 mb-3">Participated in intensive programming workshops covering various languages and frameworks.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-cyan-400 bg-opacity-20 text-cyan-400 px-3 py-1 rounded-full text-sm">C</span>
+                                <span class="bg-cyan-400 bg-opacity-20 text-cyan-400 px-3 py-1 rounded-full text-sm">Html</span>
+                                <span class="bg-cyan-400 bg-opacity-20 text-cyan-400 px-3 py-1 rounded-full text-sm">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20 transition transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-2"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-blue-400 mb-2">
+                                <i class="fas fa-cubes mr-2"></i> 3D Design Project
+                            </h3>
+                            <p class="text-gray-300 mb-3">Created 3D models and designs using industry-standard software, exploring creative possibilities in digital art.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-400 bg-opacity-20 text-blue-400 px-3 py-1 rounded-full text-sm">Blender</span>
+                                <span class="bg-blue-400 bg-opacity-20 text-blue-400 px-3 py-1 rounded-full text-sm">3D Modeling</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20 transition transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-2"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-purple-400 mb-2">
+                                <i class="fas fa-graduation-cap mr-2"></i> Student Involvement
+                            </h3>
+                            <p class="text-gray-300 mb-3">Active participant in university seminars and workshops focused on emerging technologies and innovation.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-400 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full text-sm">Workshops</span>
+                                <span class="bg-purple-400 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full text-sm">Seminars</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20 transition transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-r from-pink-400 to-red-500 h-2"></div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-pink-400 mb-2">
+                                <i class="fas fa-handshake mr-2"></i> Collaborative Projects
+                            </h3>
+                            <p class="text-gray-300 mb-3">Worked on team projects that emphasized communication and problem-solving skills in collaborative environments.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-pink-400 bg-opacity-20 text-pink-400 px-3 py-1 rounded-full text-sm">Teamwork</span>
+                                <span class="bg-pink-400 bg-opacity-20 text-pink-400 px-3 py-1 rounded-full text-sm">Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="bg-gray-800 rounded-lg p-8 border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-6">Key Highlights</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-4 font-bold text-lg">→</span>
+                            <div>
+                                <p class="font-semibold text-gray-100">Programming Languages Mastery</p>
+                                <p class="text-gray-400">Proficient in C,  and Python with hands-on project experience</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-4 font-bold text-lg">→</span>
+                            <div>
+                                <p class="font-semibold text-gray-100">3D Design Expertise</p>
+                                <p class="text-gray-400">Advanced skills in Blender for creating professional 3D models</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-4 font-bold text-lg">→</span>
+                            <div>
+                                <p class="font-semibold text-gray-100">Strong Communication Skills</p>
+                                <p class="text-gray-400">Effective at presenting ideas and collaborating with diverse teams</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-4 font-bold text-lg">→</span>
+                            <div>
+                                <p class="font-semibold text-gray-100">Continuous Learning</p>
+                                <p class="text-gray-400">Actively exploring AI, VR, and cutting-edge technologies</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 bg-gray-950">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">Technical</span> Skills
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Programming Languages -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-cyan-400 mb-4">
+                            <i class="fas fa-code mr-2"></i> Programming Languages
+                        </h3>
+
+                        <div class="space-y-4">
+                            <!-- C -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">C</span>
+                                    <span class="text-cyan-400">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Java -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">Java</span>
+                                    <span class="text-cyan-400">50%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Python -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">Python</span>
+                                    <span class="text-cyan-400">50%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                            <!-- HTML/CSS/JavaScript -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">HTML/CSS/JavaScript</span>
+                                    <span class="text-cyan-400">30%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-pink-400 to-red-500 h-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software & Tools -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-4">
+                            <i class="fas fa-tools mr-2"></i> Software & Tools
+                        </h3>
+
+                        <div class="space-y-4">
+                            <!-- Blender -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">Blender</span>
+                                    <span class="text-blue-400">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-blue-400 to-cyan-500 h-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Git & Version Control -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">Git & Version Control</span>
+                                    <span class="text-blue-400">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Visual Studio Code -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">VS Code & IDEs</span>
+                                    <span class="text-blue-400">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-blue-400 to-purple-500 h-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Linux -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-300 font-semibold">Linux & Command Line</span>
+                                    <span class="text-blue-400">50%</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="mt-12 bg-gray-900 rounded-lg p-8 border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-purple-400 mb-6">
+                        <i class="fas fa-person-hiking mr-2"></i> Soft Skills
+                    </h3>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-comments text-gray-950"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100">Communication</h4>
+                                <p class="text-gray-400">Clear and effective at articulating ideas to diverse audiences</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-purple-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-users text-gray-950"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100">Team Collaboration</h4>
+                                <p class="text-gray-400">Works well in diverse teams toward common goals</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-purple-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-gray-950"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100">Problem Solving</h4>
+                                <p class="text-gray-400">Approaches challenges analytically and creatively</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-purple-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-graduation-cap text-gray-950"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100">Continuous Learning</h4>
+                                <p class="text-gray-400">Eager to grow and adapt in rapidly changing tech landscape</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="py-20 px-4 bg-gray-900">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">Interests &</span> Hobbies
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <!-- Interest Card 1 -->
+                    <div class="group">
+                        <div class="bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg p-1 mb-4 hover:shadow-lg hover:shadow-cyan-400/50 transition">
+                            <div class="bg-gray-900 rounded-lg p-6 group-hover:bg-gray-800 transition">
+                                <div class="text-5xl mb-4">🤖</div>
+                                <h3 class="text-xl font-semibold text-cyan-400 mb-3">Artificial Intelligence</h3>
+                                <p class="text-gray-300">Fascinated by AI and machine learning technologies. Exploring how AI can solve real-world problems and improve user experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interest Card 2 -->
+                    <div class="group">
+                        <div class="bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg p-1 mb-4 hover:shadow-lg hover:shadow-purple-400/50 transition">
+                            <div class="bg-gray-900 rounded-lg p-6 group-hover:bg-gray-800 transition">
+                                <div class="text-5xl mb-4">🥽</div>
+                                <h3 class="text-xl font-semibold text-purple-400 mb-3">Virtual Reality</h3>
+                                <p class="text-gray-300">Passionate about VR technology and immersive experiences. Interested in developing VR applications and interactive environments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interest Card 3 -->
+                    <div class="group">
+                        <div class="bg-gradient-to-br from-orange-400 to-red-500 rounded-lg p-1 mb-4 hover:shadow-lg hover:shadow-orange-400/50 transition">
+                            <div class="bg-gray-900 rounded-lg p-6 group-hover:bg-gray-800 transition">
+                                <div class="text-5xl mb-4">🎨</div>
+                                <h3 class="text-xl font-semibold text-orange-400 mb-3">3D Modeling</h3>
+                                <p class="text-gray-300">Love creating 3D models and digital art using Blender. Combining technical skills with creative expression to bring ideas to life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobby Details -->
+                <div class="bg-gray-800 rounded-lg p-8 border border-gray-700 mb-8">
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-6">What I Enjoy Creating</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-100 mb-3">Technical Projects</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-center"><span class="text-cyan-400 mr-2">▸</span> Interactive VR experiences</li>
+                                <li class="flex items-center"><span class="text-cyan-400 mr-2">▸</span> AI-powered applications</li>
+                                <li class="flex items-center"><span class="text-cyan-400 mr-2">▸</span> Web applications and tools</li>
+                                <li class="flex items-center"><span class="text-cyan-400 mr-2">▸</span> Real-time graphics systems</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-100 mb-3">Creative Works</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-center"><span class="text-purple-400 mr-2">▸</span> 3D character models</li>
+                                <li class="flex items-center"><span class="text-purple-400 mr-2">▸</span> Environment design</li>
+                                <li class="flex items-center"><span class="text-purple-400 mr-2">▸</span> Animation and motion graphics</li>
+                                <li class="flex items-center"><span class="text-purple-400 mr-2">▸</span> Visual effects and renderings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Interests -->
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-cyan-400 transition">
+                        <p class="font-semibold text-cyan-400 mb-2">💡 Innovation</p>
+                        <p class="text-gray-300 text-sm">Always exploring cutting-edge technologies and innovative solutions</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-purple-400 transition">
+                        <p class="font-semibold text-purple-400 mb-2">🌍 Global Tech</p>
+                        <p class="text-gray-300 text-sm">Interested in how technology is used worldwide to solve problems</p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 hover:border-pink-400 transition">
+                        <p class="font-semibold text-pink-400 mb-2">🚀 Future-Ready</p>
+                        <p class="text-gray-300 text-sm">Committed to continuous learning and staying ahead in tech trends</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorite Music Section -->
+        <section id="music" class="py-20 px-4 bg-gray-950">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">Pump Up</span> the Volume
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Music Player Card -->
+                    <div class="flex justify-center">
+                        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400 transition w-full max-w-sm">
+                            <!-- Now Playing Label -->
+                            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">Now Playing</p>
+
+                            <!-- Album Art -->
+                            <div class="relative mb-8 flex justify-center">
+                                <div class="w-48 h-48 rounded-xl overflow-hidden border-4 border-cyan-400 shadow-lg shadow-cyan-400/50">
+                                    <img src="images/album-djo.jpg" alt="End of Beginning Album Art" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+
+                            <!-- Song Info -->
+                            <div class="text-center mb-6">
+                                <h3 class="text-2xl font-bold text-white mb-2">End of Beginning</h3>
+                                <p class="text-cyan-400 font-semibold">DJO</p>
+                            </div>
+
+                            <!-- Progress Bar -->
+                            <div class="mb-4">
+                                <div class="bg-gray-700 rounded-full h-1 w-full overflow-hidden cursor-pointer" data-music-progress-container>
+                                    <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-full transition-all" data-music-progress style="width: 35%"></div>
+                                </div>
+                                <div class="flex justify-between text-xs text-gray-400 mt-2">
+                                    <span data-music-current-time>2:15</span>
+                                    <span data-music-duration>6:20</span>
+                                </div>
+                            </div>
+
+                            <!-- Volume Control -->
+                            <div class="flex items-center gap-3 mb-6">
+                                <i class="fas fa-volume-down text-gray-400"></i>
+                                <input type="range" min="0" max="100" value="70" class="flex-1 cursor-pointer" data-music-volume>
+                                <span class="text-xs text-gray-400 w-6 text-right" data-music-volume-display>70</span>
+                            </div>
+
+                            <!-- Controls -->
+                            <div class="flex items-center justify-center gap-4 mb-6">
+                                <button class="w-12 h-12 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition flex items-center justify-center" data-music-shuffle>
+                                    <i class="fas fa-shuffle text-sm"></i>
+                                </button>
+                                <button class="w-12 h-12 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition flex items-center justify-center" data-music-prev>
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button class="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-gray-950 transition flex items-center justify-center shadow-lg shadow-cyan-400/50" data-music-play>
+                                    <i class="fas fa-play ml-1"></i>
+                                </button>
+                                <button class="w-12 h-12 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition flex items-center justify-center" data-music-next>
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                                <button class="w-12 h-12 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition flex items-center justify-center" data-music-repeat>
+                                    <i class="fas fa-redo text-sm"></i>
+                                </button>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <button class="w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition flex items-center justify-center gap-2" data-music-copy>
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                                <a href="https://www.youtube.com/watch?v=xy3AcmW0lrQ" target="_blank" rel="noopener noreferrer" class="w-full bg-cyan-400 hover:bg-cyan-500 text-gray-950 font-semibold py-2 px-4 rounded-lg transition flex items-center justify-center gap-2">
+                                    <i class="fab fa-youtube"></i> Listen
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Music Description -->
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-3xl font-semibold text-cyan-400 mb-4">
+                                <i class="fas fa-music mr-2"></i> My Favorite Song
+                            </h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                "End of Beginning” is about change, nostalgia, and personal growth. The song reflects the feeling of standing at a turning point in life—when one chapter is ending and another is about to begin.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition">
+                            <h4 class="text-xl font-semibold text-cyan-400 mb-4">
+                                <i class="fas fa-heart text-pink-400 mr-2"></i> Why I Love It
+                            </h4>
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▸</span>
+                                    <span>It feels honest and deeply emotional</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▸</span>
+                                    <span>It helps me reflect on changes in my own life.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▸</span>
+                                    <span>Perfectly captures feelings of new beginnings and hope</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-cyan-400 mr-3">▸</span>
+                                    <span>reminds me of the past and moments that are already gone</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg p-1">
+                            <div class="bg-gray-900 rounded-lg p-6">
+                                <p class="text-gray-100 italic text-lg text-center">
+                                    "Music is the language of the spirit"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Interests -->
+                <div class="mt-12 grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-purple-400 transition text-center">
+                        <div class="text-4xl mb-3">🎧</div>
+                        <h4 class="text-lg font-semibold text-purple-400 mb-2">Genres I Love</h4>
+                        <p class="text-gray-300 text-sm">Indie, Alternative, Lo-fi, Ambient, Synthwave</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition text-center">
+                        <div class="text-4xl mb-3">🎵</div>
+                        <h4 class="text-lg font-semibold text-blue-400 mb-2">Artist: DJO</h4>
+                        <p class="text-gray-300 text-sm">Joe Keery's musical project 
+                            - Cinematic & Atmospheric</p>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-pink-400 transition text-center">
+                        <div class="text-4xl mb-3">🎼</div>
+                        <h4 class="text-lg font-semibold text-pink-400 mb-2">Music & Life</h4>
+                        <p class="text-gray-300 text-sm">Music fuels my creativity and keeps me inspired</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates & Awards Section -->
+        <section id="certificates" class="py-20 px-4 bg-gray-900">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">Certificates &</span> Awards
+                </h2>
+
+                <!-- Certificate Cards -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Certificate 1: Project Achievement -->
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20 transition transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-award text-3xl text-cyan-400 mr-4"></i>
+                                <h3 class="text-2xl font-semibold text-cyan-400">Save The Fruits In The Box</h3>
+                            </div>
+                            <p class="text-gray-300 mb-4">The Energy and Environmental Innovation Competition 2023 was held at the national final level.
+The event was organized by the Electricity Generating Authority of Thailand (EGAT) in collaboration with leading universities across Thailandas well as the Office of the Basic Education Commission and the Thailand Greenhouse Gas Management Organization (Public Organization).</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-cyan-400 bg-opacity-20 text-cyan-400 px-3 py-1 rounded-full text-sm">Project Competition</span>
+                                <span class="bg-blue-400 bg-opacity-20 text-blue-400 px-3 py-1 rounded-full text-sm">Innovation</span>
+                                <span class="bg-purple-400 bg-opacity-20 text-purple-400 px-3 py-1 rounded-full text-sm">Team Award</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4"><i class="fas fa-calendar text-cyan-400 mr-2"></i>5–8 September 2023</p>
+                            <a href="https://www.facebook.com/profile/100064850761881/search/?q=%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition mr-4">
+                                <i class="fab fa-facebook mr-2"></i> View Details
+                            </a>
+                            <a href="https://www.canva.com/design/DAFtFce7lY4/GHsMgssoaNZfTLYw86MfeA/view?utm_content=DAFtFce7lY4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h04d5d96d6b" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
+                                <i class="fas fa-palette mr-2"></i> View Design
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2: Blender 3D Modeling -->
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden border border-gray-700 hover:border-orange-400 hover:shadow-lg hover:shadow-orange-400/20 transition transform hover:-translate-y-2">
+                        <div class="bg-gradient-to-r from-orange-400 to-red-500 h-2"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-cube text-3xl text-orange-400 mr-4"></i>
+                                <h3 class="text-2xl font-semibold text-orange-400">Blender 3D Modeling</h3>
+                            </div>
+                            <p class="text-gray-300 mb-4">Advanced 3D modeling, rendering, and visualization skills using Blender. Expertise in product design, environmental scene creation, and photorealistic rendering. Proficient in modeling techniques, lighting, materials, and animation workflows.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-orange-400 bg-opacity-20 text-orange-400 px-3 py-1 rounded-full text-sm">3D Modeling</span>
+                                <span class="bg-red-400 bg-opacity-20 text-red-400 px-3 py-1 rounded-full text-sm">Rendering</span>
+                                <span class="bg-yellow-400 bg-opacity-20 text-yellow-400 px-3 py-1 rounded-full text-sm">Visualization</span>
+                            </div>
+                            <p class="text-gray-400 text-sm mb-4"><i class="fas fa-calendar text-orange-400 mr-2"></i>Ongoing</p>
+                            <a href="https://youtu.be/2mqJ0IQ16G4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-orange-400 hover:text-orange-300 transition">
+                                <i class="fab fa-youtube mr-2"></i> Click me to watch 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save The Fruits In The Box Gallery -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-6">
+                        <i class="fas fa-images mr-2"></i> Save The Fruits In The Box Gallery
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Image 1: Science Fair Display -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-cyan-400 transition">
+                            <img src="images/save-fruits-display.jpg" alt="Save The Fruits Science Fair Display" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image 2: Team Presentation -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-blue-400 transition">
+                            <img src="images/save-fruits-team.jpg" alt="Save The Fruits Team Presentation" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image 3: Award & Recognition -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-green-400 transition">
+                            <img src="images/save-fruits-award.jpg" alt="Save The Fruits Award Ceremony" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image 4: Project Details -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-purple-400 transition">
+                            <img src="images/save-fruits-project.jpg" alt="Save The Fruits Project Details" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blender Gallery -->
+                <div class="mb-12">
+                    <h3 class="text-2xl font-semibold text-orange-400 mb-6">
+                        <i class="fas fa-cube mr-2"></i> Blender Gallery
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Image 1: Blender 3D Model -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-orange-400 transition">
+                            <img src="images/blender-3d-model.jpg" alt="Blender 3D Furniture Model" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image 2: Blender Product Design -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-red-400 transition">
+                            <img src="images/blender-product-design.jpg" alt="Blender Product Design" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image 3: Blender Render -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-yellow-400 transition">
+                            <img src="images/blender-render.jpg" alt="Blender 3D Render" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+
+                        <!-- Image 4: Blender Workspace -->
+                        <div class="group relative overflow-hidden rounded-lg border border-gray-700 hover:border-blue-400 transition">
+                            <img src="images/blender-workspace.jpg" alt="Blender Workspace & Scene Design" class="w-full h-64 object-cover transition transform group-hover:scale-110">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
+                                <i class="fas fa-expand text-white text-2xl opacity-0 group-hover:opacity-100 transition"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievement Highlights -->
+                <div class="bg-gray-800 rounded-lg p-8 border border-gray-700 mb-8">
+                    <h3 class="text-2xl font-semibold text-purple-400 mb-6">
+                        <i class="fas fa-star mr-2"></i> Achievement Highlights
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-cyan-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-trophy text-gray-950 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100 mb-2">Project Competition Winner</h4>
+                                <p class="text-gray-400">Successfully competed and earned recognition in the "Save The Fruits In The Box" innovation challenge, showcasing creative problem-solving and teamwork.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-green-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-certificate text-gray-950 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100 mb-2">Recognition Award</h4>
+                                <p class="text-gray-400">Received official recognition for contributions to environmental sustainability and innovative research in the Department of Computer Education.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-blue-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-users text-gray-950 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100 mb-2">Team Collaboration</h4>
+                                <p class="text-gray-400">Demonstrated exceptional teamwork and leadership by collaborating effectively with team members on multiple projects and presentations.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-purple-400 rounded-full p-3 mr-4 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-gray-950 text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-100 mb-2">Innovation Achievement</h4>
+                                <p class="text-gray-400">Demonstrated commitment to innovative thinking and sustainable solutions through participation in research and development initiatives.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View More Button -->
+                <div class="text-center">
+                    <a href="https://www.facebook.com/profile/100064850761881/search/?q=%E0%B8%AA%E0%B8%B8%E0%B8%94%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%84%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-gray-950 font-bold py-3 px-8 rounded-lg transition transform hover:scale-105">
+                        <i class="fab fa-facebook mr-2"></i> View All Certificates & More Details on Facebook
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4 bg-gray-950">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold font-poppins mb-12 text-center">
+                    <span class="text-cyan-400">Get In</span> Touch
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-cyan-400 mb-6">Let's Connect</h3>
+                        <p class="text-gray-300 mb-8 leading-relaxed">
+                            I'm always interested in hearing about new opportunities, projects, and collaborations. Whether you want to discuss technology, share ideas, or just say hello, feel free to reach out!
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <a href="mailto:filmcimeuxng@gmail.com" class="flex items-start p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition border border-gray-700 hover:border-cyan-400">
+                                <div class="bg-cyan-400 bg-opacity-20 rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope text-cyan-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-100">Email</h4>
+                                    <p class="text-gray-400">filmcimeuxng@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/AlphaGFX701" target="_blank" rel="noopener noreferrer" class="flex items-start p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition border border-gray-700 hover:border-blue-400">
+                                <div class="bg-blue-400 bg-opacity-20 rounded-full p-3 mr-4">
+                                    <i class="fab fa-github text-blue-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-100">GitHub</h4>
+                                    <p class="text-gray-400">@AlphaGFX701</p>
+                                </div>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://instagram.com/0xn3kr0z_" target="_blank" rel="noopener noreferrer" class="flex items-start p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition border border-gray-700 hover:border-pink-400">
+                                <div class="bg-pink-400 bg-opacity-20 rounded-full p-3 mr-4">
+                                    <i class="fab fa-instagram text-pink-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-100">Instagram</h4>
+                                    <p class="text-gray-400">@0xn3kr0z_</p>
+                                </div>
+                            </a>
+
+                            <!-- Location -->
+                            <div class="flex items-start p-4 bg-gray-900 rounded-lg border border-gray-700">
+                                <div class="bg-purple-400 bg-opacity-20 rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-purple-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-100">Location</h4>
+                                    <p class="text-gray-400">Bangkok, Thailand</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-100 mb-4">Follow Me On</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/AlphaGFX701" target="_blank" rel="noopener noreferrer" class="bg-gray-900 hover:bg-cyan-400 text-cyan-400 hover:text-gray-950 w-12 h-12 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="https://instagram.com/0xn3kr0z_" target="_blank" rel="noopener noreferrer" class="bg-gray-900 hover:bg-pink-400 text-pink-400 hover:text-gray-950 w-12 h-12 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="mailto:filmcimeuxng@gmail.com" class="bg-gray-900 hover:bg-blue-400 text-blue-400 hover:text-gray-950 w-12 h-12 rounded-full flex items-center justify-center transition">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-6">Send Me a Message</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <!-- Name -->
+                            <div>
+                                <label for="name" class="block text-gray-300 font-semibold mb-2">Your Name</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 text-gray-100 placeholder-gray-500"
+                                    placeholder="Enter your name"
+                                >
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label for="email" class="block text-gray-300 font-semibold mb-2">Your Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 text-gray-100 placeholder-gray-500"
+                                    placeholder="your.email@example.com"
+                                >
+                            </div>
+
+                            <!-- Subject -->
+                            <div>
+                                <label for="subject" class="block text-gray-300 font-semibold mb-2">Subject</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 text-gray-100 placeholder-gray-500"
+                                    placeholder="What's this about?"
+                                >
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label for="message" class="block text-gray-300 font-semibold mb-2">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="5"
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-400 text-gray-100 placeholder-gray-500"
+                                    placeholder="Your message here..."
+                                ></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button 
+                                type="submit"
+                                class="w-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-gray-950 font-bold py-3 px-6 rounded-lg transition transform hover:scale-105 flex items-center justify-center space-x-2"
+                            >
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+
+                            <!-- Success Message -->
+                            <div id="successMessage" class="hidden bg-green-400 bg-opacity-20 text-green-400 p-4 rounded-lg text-center">
+                                ✓ Thank you! Your message has been received.
+                            </div>
+                        </form>
+
+                        <!-- Note about form -->
+                        <p class="text-gray-400 text-sm mt-4">
+                            💡 Note: This form is a client-side demo. To make it functional, you'll need to set up a backend service or use a service like Formspree or Netlify Forms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800 py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <h3 class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">Thanadon Jaimuang</h3>
+                    <p class="text-gray-400">Computer Education Student & Creative Developer</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-gray-100 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
+                        <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div>
+                    <h4 class="font-semibold text-gray-100 mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/AlphaGFX701" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://instagram.com/0xn3kr0z_" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-pink-400 transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:filmcimeuxng@gmail.com" class="text-gray-400 hover:text-blue-400 transition text-xl">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 py-8">
+                <!-- Copyright -->
+                <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+                    <p>&copy; 2024 Thanadon Jaimuang. All rights reserved.</p>
+                    <p>Built with <span class="text-cyan-400">❤️</span> using HTML, CSS & Tailwind</p>
+                </div>
+            </div>
+
+            <!-- Scroll to Top Button -->
+            <div class="text-center mt-6">
+                <button id="scrollToTop" class="bg-gray-800 hover:bg-cyan-400 text-cyan-400 hover:text-gray-950 px-4 py-2 rounded-full transition inline-flex items-center space-x-2 opacity-0">
+                    <span>Back to Top</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Zoom Modal -->
+    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-96 w-full">
+            <img id="modalImage" src="" alt="Zoomed Image" class="w-full h-full object-contain rounded-lg">
+            <button id="closeModal" class="absolute top-4 right-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition">
+                <i class="fas fa-times mr-2"></i>Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const enterButton = document.getElementById('enterButton');
+        const welcomeSection = document.getElementById('welcome');
+
+        if (enterButton && welcomeSection) {
+            enterButton.addEventListener('click', () => {
+                // เพิ่ม animation ค่อยๆ จางหายไป
+                welcomeSection.style.opacity = '0';
+                
+                // รอให้ animation จบแล้วค่อยซ่อน element เพื่อไม่ให้ขวางการคลิกส่วนอื่นๆ
+                setTimeout(() => {
+                    welcomeSection.style.display = 'none';
+                }, 1000); // 1000ms เท่ากับ duration-1000 ใน class Tailwind
+            });
+        }
+    });
+</script>
+</body>
+</html>
